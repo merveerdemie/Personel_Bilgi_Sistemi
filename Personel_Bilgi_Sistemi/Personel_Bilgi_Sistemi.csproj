@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F26F72A-79C8-403A-9103-1B478C3165C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Personel_Bilgi_Sistemi</RootNamespace>
+    <AssemblyName>Personel_Bilgi_Sistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContextSınıfı.cs" />
+    <Compile Include="Departman Kayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departman Kayıt.Designer.cs">
+      <DependentUpon>Departman Kayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departman.cs" />
+    <Compile Include="Personel Arama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel Arama.Designer.cs">
+      <DependentUpon>Personel Arama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel Bilgi Sistemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel Bilgi Sistemi.Designer.cs">
+      <DependentUpon>Personel Bilgi Sistemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel Kayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel Kayıt.Designer.cs">
+      <DependentUpon>Personel Kayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Departman Kayıt.resx">
+      <DependentUpon>Departman Kayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel Arama.resx">
+      <DependentUpon>Personel Arama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel Bilgi Sistemi.resx">
+      <DependentUpon>Personel Bilgi Sistemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel Kayıt.resx">
+      <DependentUpon>Personel Kayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_128_2Q1_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arka plan.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indir_DBX_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kaydet_icon_png_5_FPz_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man_icon_mzo_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demir-reklam-hoş-geldiniz-arka-plan-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_125189752-stock-illustration-woman-icon-cartoon-single-avatarpeaople.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\79-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62784971-analysing-resume-personnel-or-searching-professional-staff-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62784971-analysing-resume-personnel-or-searching-professional-staff-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\79-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outsourcing-company-business-department-workload-512 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zerode-Plump-Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1211806505.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restart-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Plan.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,5 @@
+﻿
+
+http://www.kodstrap.com/makale/entity-framework-ile-veri-ekleme-silme-guncelleme?m=1
+
+entity ile veri ekleme ,güncelleme silme
